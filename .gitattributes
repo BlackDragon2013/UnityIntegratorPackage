@@ -1,0 +1,13 @@
+. !text !filter !merge !diff
+*.json !text !filter !merge !diff
+*.swift !text !filter !merge !diff
+*.h !text !filter !merge !diff
+*.xml !text !filter !merge !diff
+*.plist !text !filter !merge !diff
+*.dat !text !filter !merge !diff
+*.config !text !filter !merge !diff
+*.gitignore !text !filter !merge !diff
+*.md !text !filter !merge !diff
+*.modulemap !text !filter !merge !diff
+*.rsp !text !filter !merge !diff
+*.pdb !text !filter !merge !diff
