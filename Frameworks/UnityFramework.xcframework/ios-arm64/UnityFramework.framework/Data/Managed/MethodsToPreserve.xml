@@ -1,0 +1,18 @@
+<linker>
+	<assembly fullname="Assembly-CSharp" ignoreIfMissing="1">
+		<type fullname="Camera">
+			<method name="changeCameraStatus"/>
+			<method name="goBack"/>
+		</type>
+		<type fullname="GPS">
+			<method name="changeGPSStatus"/>
+			<method name="goBack"/>
+		</type>
+		<type fullname="GyroCamera">
+			<method name="goBack"/>
+		</type>
+		<type fullname="Sphere">
+			<method name="goBack"/>
+		</type>
+	</assembly>
+</linker>
