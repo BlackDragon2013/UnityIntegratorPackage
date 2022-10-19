@@ -21,6 +21,9 @@ let package = Package(
         .target(
             name: "UnityIntegratorPackage",
             dependencies: []),
+        .binaryTarget(
+            name: "UnityFramework",
+            path: "Frameworks/UnityFramework.xcframework"),
         .testTarget(
             name: "UnityIntegratorPackageTests",
             dependencies: ["UnityIntegratorPackage"]),
