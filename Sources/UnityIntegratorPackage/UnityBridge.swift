@@ -213,13 +213,13 @@ public class UnityBridge: UIResponder, UIApplicationDelegate {
 }
 
 extension UnityBridge: UnityFrameworkListener {
-    func unityDidUnload(_ notification: Notification!) {
+    public func unityDidUnload(_ notification: Notification!) {
         unityFrameWork?.unregisterFrameworkListener(self)
         unityFrameWork = nil
         UnityBridge.hideUnity()
     }
     
-    func unityDidQuit(_ notification: Notification!) {
+    public func unityDidQuit(_ notification: Notification!) {
         unityFrameWork?.unregisterFrameworkListener(self)
         unityFrameWork = nil
     }
