@@ -12,7 +12,7 @@ import UnityFramework
 /**
  Loads Unity module inside the host app and handles all its behaviors and allows to send data to Unity
  */
-class UnityBridge: UIResponder, UIApplicationDelegate {
+public class UnityBridge: UIResponder, UIApplicationDelegate {
     
     private let dataBundleId = "com.unity3d.framework"
     private let frameworkPath = "/Frameworks/UnityFramework.framework"
@@ -30,7 +30,7 @@ class UnityBridge: UIResponder, UIApplicationDelegate {
      
      - Returns: The `UIView` where the Unity module is running
      */
-    static func getUnityView() -> UIView? {
+    public static func getUnityView() -> UIView? {
         return instance.unityFrameWork?.appController().rootView
     }
     
@@ -39,14 +39,14 @@ class UnityBridge: UIResponder, UIApplicationDelegate {
      
      - Returns: The `UIViewController` where the Unity module is hosted
      */
-    static func getUnityRootVC() -> UIViewController? {
+    public static func getUnityRootVC() -> UIViewController? {
         return instance.unityFrameWork?.appController().rootViewController
     }
     
     /**
      Initialize or loads the Unity module in the current `UIViewController`
      */
-    static func showUnity() {
+    public static func showUnity() {
         if let instance = UnityBridge.instance, instance.isInitialized {
             instance.showWindow()
         } else {
@@ -57,35 +57,35 @@ class UnityBridge: UIResponder, UIApplicationDelegate {
     /**
      Hides Unity module from the current `UIViewController`
      */
-    static func hideUnity() {
+    public static func hideUnity() {
         UnityBridge.instance?.hideWindow()
     }
     
     /**
      Removes Unity module from the current `UIViewController`
      */
-    static func unloadUnity() {
+    public static func unloadUnity() {
         UnityBridge.instance?.unloadWindow()
     }
     
     /**
      Pauses Unity module
      */
-    static func pauseUnity() {
+    public static func pauseUnity() {
         UnityBridge.instance?.unityFrameWork?.pause(true)
     }
     
     /**
      Resumes Unity module
      */
-    static func resumeUnity() {
+    public static func resumeUnity() {
         UnityBridge.instance?.unityFrameWork?.pause(false)
     }
     
     /**
      Finishes Unity module and host app
      */
-    static func quitUnity() {
+    public static func quitUnity() {
         UnityBridge.instance?.quitWindow()
     }
     
@@ -99,7 +99,7 @@ class UnityBridge: UIResponder, UIApplicationDelegate {
      
      - Invariant: On apps that supports multiple windows, Unity module is hosted on a new window, so the host window by default is the first in the app array of window objects
      */
-    static func setHostMainWindow(_ hostMainWindow: UIWindow?) {
+    public static func setHostMainWindow(_ hostMainWindow: UIWindow?) {
         UnityBridge.hostMainWindow = hostMainWindow
     }
     
@@ -111,7 +111,7 @@ class UnityBridge: UIResponder, UIApplicationDelegate {
      
      - Precondition: If the host app only uses `UIWindowSceneDelegate` of runs under the new `SwiftUI` app lifecycle the launching options are determined by default so there is no need to call this method
      */
-    static func setLaunchingOptions(_ launchingOptions: [UIApplication.LaunchOptionsKey: Any]?) {
+    public static func setLaunchingOptions(_ launchingOptions: [UIApplication.LaunchOptionsKey: Any]?) {
         UnityBridge.launchOptions = launchingOptions
     }
     
