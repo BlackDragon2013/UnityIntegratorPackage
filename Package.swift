@@ -21,9 +21,9 @@ let package = Package(
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
-        /*.target(
+        .target(
             name: "UnityIntegratorPackage",
-            dependencies: ["UnityFramework"]),*/
+            dependencies: ["UnityFramework"]),
         .binaryTarget(
             name: "UnityFramework",
             path: "./Frameworks/UnityFramework.xcframework"),
