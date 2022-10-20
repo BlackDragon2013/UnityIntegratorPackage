@@ -10,7 +10,7 @@ import Foundation
 /**
  Manage and receives messages sent from Unity module
  */
-public class UnityListener: NSObject, iOSBridgeProtocol {
+/*public class UnityListener: NSObject, iOSBridgeProtocol {
     
     var delegate: UnityListenerDelegate?
     
@@ -46,4 +46,4 @@ protocol UnityListenerDelegate {
         - message: The message sent from Unity and received from the bridge
      */
     func processMessageFromUnity(_ message: String)
-}
+}*/

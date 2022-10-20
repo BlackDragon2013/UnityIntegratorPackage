@@ -6,6 +6,7 @@
 //
 
 import Foundation
+#if canImport(UIKit)
 import UIKit
 import UnityFramework
 
@@ -224,3 +225,4 @@ extension UnityBridge: UnityFrameworkListener {
         unityFrameWork = nil
     }
 }
+#endif
